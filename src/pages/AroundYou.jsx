@@ -1,5 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const CountryTracks = () => <div>CountryTracks</div>;
+const CountryTracks = () => (
+  <div className="border 4 border-red-500">CountryTracks</div>
+);
 
 export default CountryTracks;

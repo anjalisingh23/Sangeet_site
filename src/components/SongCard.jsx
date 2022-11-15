@@ -17,21 +17,21 @@ const SongCard = ({ song, isPlaying, activeSong, data, index }) => {
   };
 
   return (
-    <div className="flex flex-col w-[250px] p-4 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer border-2 border-dotted border-red-500">
-      <div className="relative w-full h-56 group border-2 border-white">
+    <div className="flex flex-col w-[250px] p-4 bg-white/5 bg-opacity-80 backdrop-blur-sm animate-slideup rounded-lg cursor-pointer">
+      <div className="relative w-full h-56 group">
         <div
-          className={`absolute inset-0 justify-center items-center bg-black bg-opacity-50 border-2 border-dashed border-green-300 group-hover:flex  ${
+          className={`absolute inset-0 justify-center items-center bg-black bg-opacity-50 group-hover:flex  ${
             activeSong?.title === song.title
               ? "flex bg-black bg-opacity-70"
               : "hidden"
           }`}
         >
           <PlayPause
-            song={song}
-            handlePause={handlePauseClick}
-            handlePlay={handlePlayClick}
             isPlaying={isPlaying}
             activeSong={activeSong}
+            song={song}
+            handlePause={handlePauseClick}
+            handlePlay={() => handlePlayClick(song, index)}
           />
         </div>
         <img src={song.images?.coverart} alt="song_img" />

@@ -16,13 +16,13 @@ const App = () => {
   const { activeSong } = useSelector((state) => state.player);
 
   return (
-    <div className="relative flex border-8 border-green-700">
+    <div className="relative flex">
       <Sidebar />
-      <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286] border-4 border-yellow-500">
+      <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
         <Searchbar />
 
-        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse border-2 border-white">
-          <div className="flex-1 h-fit pb-40 border-2 border-green-400">
+        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse border-2 border-green-400">
+          <div className="flex-1 h-fit pb-40 border-4 border-dotted border-orange-400">
             <Routes>
               <Route path="/" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
@@ -33,7 +33,7 @@ const App = () => {
               <Route path="/search/:searchTerm" element={<Search />} />
             </Routes>
           </div>
-          <div className="xl:sticky relative top-0 h-fit border-2 border-dotted border-orange-300">
+          <div className="xl:sticky relative top-0 h-fit border-4 border-double border-blue-500">
             <TopPlay />
           </div>
         </div>
