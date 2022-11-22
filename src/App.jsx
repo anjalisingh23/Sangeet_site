@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
 import { Searchbar, Sidebar, MusicPlayer, TopPlay } from "./components";
 import {
@@ -21,8 +22,8 @@ const App = () => {
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
         <Searchbar />
 
-        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse border-2 border-green-400">
-          <div className="flex-1 h-fit pb-40 border-4 border-dotted border-orange-400">
+        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll flex xl:flex-row flex-col-reverse border-2 border-green-400">
+          <div className="flex-1 h-fit pb-40 ">
             <Routes>
               <Route path="/" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
