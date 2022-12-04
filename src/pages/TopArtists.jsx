@@ -11,7 +11,7 @@ const TopArtists = () => {
   if (error) return <Error />;
 
   return (
-    <div className="flex flex-col border-2 border-red-400">
+    <div className="flex flex-col ">
       <h2 className="font-bold text-3xl text-white text-left mt-4 mb-10">
         Top Artists
       </h2>

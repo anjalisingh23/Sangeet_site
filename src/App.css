@@ -1,3 +1,6 @@
-.add {
-  overflow-y: scroll;
+.addf {
+  flex-grow: 1.5;
+}
+.addx {
+  flex-grow: 1;
 }
